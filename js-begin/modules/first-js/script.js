@@ -1,24 +1,22 @@
-let afaviouriteNumber = 4_000;
-
-console.log(afaviouriteNumber);
-
-afaviouriteNumber = 5_000;
-
-console.log(afaviouriteNumber);
-
-// exercise
-
-// let a,b,c = 1,2,3; // not possible
-// let a,  b,  c = 1; //  not possible only c will get 1 as a value
 let a = 1;
-let b = 2;
-let c = 3;
-console.log(a);
-console.log(b);
-console.log(c);
+let b;
 
-a = 3;
-let d = a; // here d will be 3 only will not change to 5
-a = 5;
-console.log(a);
-console.log(d);
+console.log(typeof a);
+// whenever a variable is used it is created automatically
+console.log(typeof b); // undefined
+console.log(typeof (b = 2)); // number
+console.log(typeof b); // number
+
+console.log(a + b);
+a = 2;
+console.log(b * a + a);
+console.log((a + b) * a);
+
+let int = 8;
+let float = 3.7;
+
+console.log(int + float);
+console.log(int * float);
+
+console.log(int / 10_000);
+console.log(float / 2);
