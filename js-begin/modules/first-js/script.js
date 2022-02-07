@@ -1,22 +1,32 @@
-let a = 1;
-let b;
+let string = "with double quote";
 
-console.log(typeof a);
-// whenever a variable is used it is created automatically
-console.log(typeof b); // undefined
-console.log(typeof (b = 2)); // number
-console.log(typeof b); // number
+console.log(string);
 
-console.log(a + b);
-a = 2;
-console.log(b * a + a);
-console.log((a + b) * a);
+let str = 'hi there this is a "string"';
 
-let int = 8;
-let float = 3.7;
+console.log(str);
 
-console.log(int + float);
-console.log(int * float);
+let nme = "brad";
 
-console.log(int / 10_000);
-console.log(float / 2);
+console.log("hello there " + nme);
+nme = string + str;
+
+console.log(nme);
+
+let strng = ""; //immutable
+for (let i = 1; i <= 10; i++) {
+  strng += i;
+}
+console.log(strng);
+console.log(strng[2]);
+
+strng = "hello";
+strng[2] = 4;
+console.log(strng[2] * 2); // not a number
+for (let i = 0; i <= strng.length + 1; i++) {
+  console.log(
+    "index is " + strng.indexOf(strng.charAt(i)) + " char is " + strng.charAt(i)
+  ); // if out of bound then it will return 0 for that index
+}
+console.log(typeof strng.charAt(3));
+console.log(strng);
