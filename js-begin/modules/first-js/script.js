@@ -1,32 +1,37 @@
-let string = "with double quote";
+let flag = true;
 
-console.log(string);
+console.log(flag);
+console.log(Number(flag));
+flag = "truth";
+console.log(flag); // now it will be a string
+console.log(typeof flag);
 
-let str = 'hi there this is a "string"';
-
-console.log(str);
-
-let nme = "brad";
-
-console.log("hello there " + nme);
-nme = string + str;
-
-console.log(nme);
-
-let strng = ""; //immutable
-for (let i = 1; i <= 10; i++) {
-  strng += i;
+if (flag) {
+  console.log("if executed");
 }
-console.log(strng);
-console.log(strng[2]);
 
-strng = "hello";
-strng[2] = 4;
-console.log(strng[2] * 2); // not a number
-for (let i = 0; i <= strng.length + 1; i++) {
-  console.log(
-    "index is " + strng.indexOf(strng.charAt(i)) + " char is " + strng.charAt(i)
-  ); // if out of bound then it will return 0 for that index
-}
-console.log(typeof strng.charAt(3));
-console.log(strng);
+console.log(Boolean(flag)); // true
+flag = "g";
+console.log(Number(flag)); // nan
+
+flag = -1;
+console.log(Boolean(flag));
+
+flag = 0;
+console.log(Boolean(flag));
+console.log("\n");
+console.log(true ^ false);
+console.log(true && false);
+console.log(true || false);
+console.log(!false);
+console.log(Boolean(true + false)); // coerction happens here
+console.log(Boolean(false - true));
+console.log(Boolean(false * true));
+console.log(Boolean(true / false)); // infinity == true
+console.log("\n");
+// exercise
+let happy = true;
+let fun = true;
+
+console.log(happy && fun);
+console.log(!happy && fun);
