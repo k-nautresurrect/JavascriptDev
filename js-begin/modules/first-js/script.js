@@ -1,26 +1,44 @@
-let a = 8;
-let b = 9;
+// functions
+function sayhi() {
+  return "hi";
+}
 
-console.log(a == b);
-console.log(a != b);
-console.log(a < b);
-console.log(a > b);
-console.log(a <= b); // a < b || a == b
-console.log(a >= b); // a > b || a == b
-console.log(a ^ b); // bitwise works just fine
+let str = sayhi();
+console.log(sayhi());
 
-console.log("\n");
+function sayhello() {
+  console.log("hello");
+  return;
+}
 
-let str = "brad";
-let str2 = "bradane";
+let v = sayhello();
+console.log(v);
 
-console.log(str == str2);
-console.log(str < str2);
-console.log(str > str2);
-console.log(str >= str2);
-console.log(str <= str2);
-console.log(str != str2);
-// ambigous statement however return 0 on every bitwise operation
-console.log(str ^ str2);
+let lg = console.log("this is lg");
 
-console.log(console.log.toString());
+function sayName(name) {
+  console.log(name);
+}
+
+sayName(); // default name is undefined
+sayName("c"); // string is passed
+sayName(98); // Number is passed
+
+function typedName(name) {
+  if (typeof name === "string") {
+    return name;
+  }
+  return -1;
+}
+
+function typedNum(num) {
+  if (typeof num === "number") {
+    return num;
+  }
+  return -1;
+}
+
+console.log(typedName(90));
+console.log(typedName("kushagra"));
+console.log(typedNum(87));
+console.log(typedNum("89"));
