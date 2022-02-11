@@ -1,47 +1,39 @@
-// variable
-const x = 90;
-console.log(x);
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-let y = 70;
-console.log(y); // not contain the latest value
-y = 40;
+arr.push(11);
+arr.push(["num1", "num2"]);
+console.log(arr);
+console.log(arr[11]);
+console.log(arr[11][0]);
 
-var i;
-console.log(i);
-i = 19;
-console.log(i);
-var i = 87;
-console.log(i);
+let charr = ["a", "b", "c", "d", "e"];
 
-console.log(typeof i);
-console.log(typeof typeof i);
+console.log(charr[parseInt(charr.length / 2)]);
 
-let stI = "2";
-console.log(stI + "\t" + typeof stI);
+console.log(typeof arr);
 
-stI = Number(stI);
-console.log(stI + "\t" + typeof stI);
+// object
+let person = {
+  name: "brad",
+  age: 25,
+  num: 6,
+  sayhi: function (name) {
+    console.log("hi " + name);
+  },
+  sayhi2(name, age) {
+    console.log("hi " + name + " " + age);
+  },
+  adress: {
+    street: 98,
+    city: "florida",
+  },
+  hobies: ["driving", "prog"],
+};
 
-stI = "2.987";
-console.log(stI + "\t" + typeof stI);
-
-stI = Number(stI);
-console.log(stI + "\t" + typeof stI);
-
-stI = parseInt(stI);
-console.log(stI + "\t" + typeof stI);
-stI = "2.987";
-
-stI = parseFloat(stI);
-console.log(stI + "\t" + typeof stI);
-
-// implicit type coercion
-let st = "hello";
-let num = 45;
-console.log(st + num);
-console.log(st - num);
-st = "3";
-console.log(st - num);
-st = "A";
-st = Number(st);
-console.log(st - num);
+console.log(person);
+console.log(person.name);
+console.log(person.age);
+console.log(typeof person.age);
+person.sayhi("jhon");
+person.sayhi2("jhonas", 45);
+console.log(person.adress.city);
