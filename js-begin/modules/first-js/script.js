@@ -1,27 +1,47 @@
-// Closures
-let a = 5;
+// variable
+const x = 90;
+console.log(x);
 
-function print() {
-  console.log(a); // the latest value of a
-}
+let y = 70;
+console.log(y); // not contain the latest value
+y = 40;
 
-a = 4;
-print();
+var i;
+console.log(i);
+i = 19;
+console.log(i);
+var i = 87;
+console.log(i);
 
-/**
- * closures
- * accessing something outside their own scope
- *
- */
+console.log(typeof i);
+console.log(typeof typeof i);
 
-function closure(variable) {
-  let c = "instring";
-  return function func(variable2) {
-    console.log(variable);
-    console.log(variable2);
-    console.log(c);
-  };
-}
+let stI = "2";
+console.log(stI + "\t" + typeof stI);
 
-let afunc = closure(3);
-afunc(9);
+stI = Number(stI);
+console.log(stI + "\t" + typeof stI);
+
+stI = "2.987";
+console.log(stI + "\t" + typeof stI);
+
+stI = Number(stI);
+console.log(stI + "\t" + typeof stI);
+
+stI = parseInt(stI);
+console.log(stI + "\t" + typeof stI);
+stI = "2.987";
+
+stI = parseFloat(stI);
+console.log(stI + "\t" + typeof stI);
+
+// implicit type coercion
+let st = "hello";
+let num = 45;
+console.log(st + num);
+console.log(st - num);
+st = "3";
+console.log(st - num);
+st = "A";
+st = Number(st);
+console.log(st - num);
